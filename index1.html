@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sug'diyona ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+color:white;
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.screen{
+display:none;
+width:90%;
+max-width:700px;
+text-align:center;
+padding:40px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+border-radius:25px;
+box-shadow:0 0 30px rgba(255,255,255,.1);
+animation:fade .6s;
+}
+
+.active{
+display:block;
+}
+
+h1{
+margin-bottom:20px;
+}
+
+p{
+font-size:20px;
+line-height:1.7;
+margin-bottom:25px;
+}
+
+button{
+padding:14px 30px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+font-size:17px;
+margin:10px;
+background:#ff4f81;
+color:white;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+#heartBtn{
+font-size:80px;
+background:none;
+padding:0;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+#rain{
+position:fixed;
+inset:0;
+pointer-events:none;
+overflow:hidden;
+}
+
+.rainHeart{
+position:absolute;
+font-size:25px;
+animation:fall 5s linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-100px);
+}
+100%{
+transform:translateY(120vh);
+}
+}
+
+.bigLove{
+font-size:55px;
+color:#ff6aa9;
+margin-top:20px;
+animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+50%{
+transform:scale(1.1);
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="rain"></div>
+
+<!-- 1 -->
+
+<div class="screen active">
+<h1>Salom Sug'diyona ❤️</h1>
+<p>Senga kichkina bir sayohat tayyorladim...</p>
+<button onclick="next()">Salom 😊</button>
+</div>
+
+<!-- 2 -->
+
+<div class="screen">
+<h1>Bir narsa aytsam 😄</h1>
+<p>Bu kichkina sayt bir necha daqiqangni oladi, lekin oxirigacha borsang afsuslanmaysan.</p>
+<button onclick="next()">Roziman ❤️</button>
+</div>
+
+<!-- 3 -->
+
+<div class="screen">
+<h1>Bir narsani so'rasam? 😊</h1>
+<p>Hozir kayfiyating yaxshimi?</p>
+
+<button onclick="goodMood()">❤️ Ha</button> <button onclick="badMood()">🥺 Yo'q</button>
+
+</div>
+
+<!-- Kayfiyat yaxshi -->
+
+<div class="screen">
+<h1>😊</h1>
+
+<p>
+Zo'r! Buni eshitganimdan xursandman ❤️
+<br><br>
+Unda davom etamiz...
+</p>
+
+<button onclick="next()">Davom etish ✨</button>
+
+</div>
+
+<!-- Kayfiyat yaxshi emas -->
+
+<div class="screen">
+<h1>🥺</h1>
+
+<p>
+Agar kayfiyating yaxshi bo'lmasa,
+bugun uni ozgina bo'lsa ham ko'tarishga
+harakat qilaman ❤️
+</p>
+
+<button onclick="next()">Davom etamiz ❤️</button>
+
+</div>
+
+<!-- 4 -->
+
+<div class="screen">
+<h1>Meni sog'indingmi? ❤️</h1>
+
+<button onclick="next()">Ha 😊</button> <button id="run1">Yo'q 😜</button>
+
+</div>
+
+<!-- 5 -->
+
+<div class="screen">
+
+<h1>❤️</h1>
+
+<p>
+Shu yurakni 5 marta bosib uyg'ot 😊
+</p>
+
+<button id="heartBtn" onclick="tapHeart()">
+❤️
+</button>
+
+<h2 id="score">0 / 5</h2>
+
+</div>
+
+<!-- 6 -->
+<div class="screen">
+
+  <h1>Senga aytadigan gaplarim bor...</h1>
+  
+  <p>Eshitishga tayyormisan?</p>
+  
+  <button onclick="next()">❤️ Albatta</button>
+  
+  <button id="run2">🙈 Yo'q</button>
+  
+  </div>
+  
+  <!-- 7 -->
+  <div class="screen">
+  
+  <h1>Bilasanmi... ❤️</h1>
+  
+  <p>
+  
+  Men seni juda qadrlayman.
+  
+  <br><br>
+  
+  Sening samimiyliging menga yoqadi.
+  
+  <br><br>
+  
+  Sening kulishing meni kuldiradi.
+  
+  <br><br>
+  
+  Sening ko'zlaringga qarash esa alohida yoqadi.
+  
+  <br><br>
+  
+  Va eng muhimi...
+  
+  <br><br>
+  
+  Sen o'zing bo'lib qolayotganing uchun rahmat ❤️
+  
+  </p>
+  
+  <button onclick="next()">
+  Davom etamiz ✨
+  </button>
+  
+  </div>
+  
+  <!-- 8 -->
+  <div class="screen">
+  
+  <h1>Eng muhim savol 😌</h1>
+  
+  <p>Meni chindan ham yoqtirasanmi?</p>
+  
+  <button onclick="loveAccepted()">
+  ❤️ Ha
+  </button>
+  
+  <button onclick="cry()">
+  💔 Yo'q
+  </button>
+  
+  <div id="cryArea"></div>
+  
+  </div>
+  
+  <!-- 9 -->
+  <div class="screen">
+  
+  <h1>❤️</h1>
+  
+  <p>
+  Bilardim 😌
+  </p>
+  
+  <button onclick="next()">
+  Yana bittasi bor
+  </button>
+  
+  </div>
+  
+  <!-- 10 -->
+  <div class="screen">
+  
+  <h1>❤️</h1>
+  
+  <p>
+  
+  Bilardim 😌
+  
+  <br><br>
+  
+  Yana bitta kichkina narsa bor...
+  
+  </p>
+  
+  <button onclick="next()">
+  Davom etish ✨
+  </button>
+  
+  </div>
+  
+  <!-- FINAL -->
+  <div class="screen">
+  
+  <h1>Sug'diyona...</h1>
+  
+  <p>
+  
+  Hayotda hamma narsa mukammal bo'lishi shart emas.
+  
+  <br><br>
+  
+  Lekin ayrim insonlar hayotni chiroyliroq qiladi.
+  
+  <br><br>
+  
+  Men uchun shunday insonlardan biri sensan ❤️
+  
+  </p>
+  
+  <div class="bigLove">
+  
+  MEN SENI SEVAMAN ❤️
+  
+  </div>
+  
+  <br>
+  
+  <p>
+  
+  Va umid qilamanki,
+  bu hikoya hali endi boshlanyapti...
+  
+  </p>
+  
+  <button onclick="next()">
+  🤗 Meni quchoqlash
+  </button>
+  
+  </div>
+  
+  <!-- OXIRGI -->
+  <div class="screen">
+  
+  <h1>🤗</h1>
+  
+  <p>
+  
+  Rahmat...
+  
+  <br><br>
+  
+  Oxirigacha kelganing uchun ❤️
+  
+  <br><br>
+  
+  Doim kulib yur Sug'diyona 😊
+  
+  </p>
+  
+  </div>
+  
+  <script>
+
+let current=0;
+
+const screens=document.querySelectorAll(".screen");
+
+function next(){
+
+screens[current].classList.remove("active");
+
+current++;
+
+screens[current].classList.add("active");
+
+}
+
+function goodMood(){
+
+screens[current].classList.remove("active");
+
+current=3;
+
+screens[current].classList.add("active");
+
+}
+
+function badMood(){
+
+screens[current].classList.remove("active");
+
+current=4;
+
+screens[current].classList.add("active");
+
+}
+
+const run1=document.getElementById("run1");
+const run2=document.getElementById("run2");
+
+function move(btn){
+
+btn.style.position="absolute";
+
+btn.style.left=Math.random()*80+"%";
+
+btn.style.top=Math.random()*80+"%";
+
+}
+
+run1?.addEventListener("mouseover",()=>move(run1));
+run2?.addEventListener("mouseover",()=>move(run2));
+
+run1?.addEventListener("touchstart",(e)=>{
+e.preventDefault();
+move(run1);
+});
+
+run2?.addEventListener("touchstart",(e)=>{
+e.preventDefault();
+move(run2);
+});
+
+let taps=0;
+
+function tapHeart(){
+
+taps++;
+
+document.getElementById("score").innerText=
+taps+" / 5";
+
+if(taps>=5){
+
+setTimeout(()=>{
+
+next();
+
+},500);
+
+}
+
+}
+
+function cry(){
+
+let area=document.getElementById("cryArea");
+
+area.innerHTML="😭 😭 😭 😭 😭";
+
+setTimeout(()=>{
+
+area.innerHTML="Bu variant ishlamaydi 😄";
+
+},1500);
+
+}
+
+function loveAccepted(){
+
+const rain=document.getElementById("rain");
+
+rain.innerHTML="";
+
+for(let i=0;i<50;i++){
+
+let h=document.createElement("div");
+
+h.className="rainHeart";
+
+h.innerHTML="❤️";
+
+h.style.left=Math.random()*100+"%";
+
+h.style.animationDuration=
+(3+Math.random()*4)+"s";
+
+rain.appendChild(h);
+
+}
+
+next();
+
+}
+
+</script>
+
+</body>
+</html>
